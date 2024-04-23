@@ -1,0 +1,463 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+
+:root {
+    --corheader: #000000;
+    --corsubtitle:#000000;
+    --corcard:#39cbdf;
+    --corbutton: #39cbdC;
+    --corinput: #f7f7f7;
+    --corplaceholder: #39cbdC;
+    --corfonte: #080808;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+.cabecalho {
+    background-color: var(--corheader);
+    padding: 10px;
+}
+
+a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+main a {
+    text-decoration: none;
+    color: var(--corfonte);
+}
+
+
+
+
+
+h1, h2, .home__text p, .sobre__text, h4, .qualificacao-text, .contato__text, .footer, .footer-copy {
+    text-align: center;
+}
+
+h2, h3 {
+    margin: 0;
+}
+
+h3 {
+    color: var(--corsubtitle);
+}
+
+
+
+.home, .home__text, .sobre {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.home__text p, .sobre__text, .sobre__img {
+    width: 80%;
+}
+
+.home__img {
+    width: 50%;
+}
+
+.home__img__blob {
+    width: 60%;
+}
+
+.home__button__contateme, .sobre__button, .contato__button {
+    background-color: var(--corbutton);
+    border: none;
+    border-radius: 10px;
+    width: 10rem;
+    height: 3rem;
+    font-size: 1em;
+    font-weight: bold;
+    color: #000;
+}
+
+/*==================== CARD ====================*/
+
+.card-frontend, .card-backend {
+    background-color: var(--corcard);
+    height: 450px;
+    border-radius: 10px;
+    margin: 0 1rem 0 1rem;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 10px 0 10px;
+}
+
+.progresso {
+    position: relative;
+    width: 93%;
+    height: 8px;
+    background: var(--corinput);
+    border-radius: 10px;
+    margin: -10px 0 5px 10px;
+}
+
+.progresso span {
+    width: 90%;
+    height: 100%;
+    background: var(--corsubtitle);
+    position: absolute;
+    border-radius: 10px;
+}
+
+.progresso-html span, .progresso-css span {
+    width: 90%;
+}
+.progresso-js span {
+    width: 50%;
+}
+.progresso-bt span, .progresso-wordpress span {
+    width: 50%;
+}
+.progresso-python span {
+    width: 40%;
+}
+.progresso-java span {
+    width: 25%;
+}
+
+/*==================== QUALIFICACOES ====================*/
+
+.qualificacao-tabs {
+    display: flex;
+    justify-content: center;
+    font-size: 1rem;
+}
+
+button, .qualificacao-educacao, .qualificacao-trabalho {
+    cursor: pointer;
+}
+
+.qualificacao-button:hover {
+    color: var(--corbutton);
+}
+
+.qualificacao-icon {
+    margin-right: 10px;
+}
+
+.qualificacao-data {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.qualificacao-subtitle {
+    display: inline-block;
+    margin-bottom: 10px;
+    color: var(--corsubtitle);
+}
+
+.qualificacao-calendario {
+    color: var(--corsubtitle);
+}
+
+.qualificacao-bolinha {
+    display: inline-block;
+    width: 13px;
+    height: 13px;
+    background-color: var(--corbutton);
+    border-radius: 50%;
+}
+
+.qualificacao-linha {
+    display: block;
+    width: 1px;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.689);
+    transform: translate(6px, -7px);
+}
+
+.qualificacao [data-content]{
+    display: none;
+}
+
+.qualificacao-ativa[data-content]{
+    display: block;
+}
+
+/*==================== CONTATE ME ====================*/
+
+.contato {
+    margin-top: 3rem;
+}
+
+.contato-icon {
+    display: flex;
+    justify-content: space-around;
+}
+
+.contato__card {
+    text-align: center;
+}
+
+.contato__card {
+    background-color: var(--corcard);
+    border-radius: 5px;
+    padding: 1rem;
+    width: 80%;
+    margin: auto;
+}
+
+.contato__email {
+    height: 16vh;
+}
+/*==================== FOOTER ====================*/
+
+footer {
+    background-color: var(--corheader);
+    color: #fff;
+    height: 100%;
+}
+
+.footer-meio {
+    margin: 3rem 0 3rem 0;
+}
+
+.footer-direito {
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 2rem;
+}
+
+.footer-copy {
+    margin: 0;
+}
+
+/*==================== ICONS ====================*/
+
+.fa-paper-plane, .fa-download, .fa-briefcase {
+    margin-left: 10px;
+}
+
+.fa-calendar-days {
+    position: relative;
+    right: 3%;
+}
+
+@media only screen and (max-width: 767px) {
+    .cabecalho__button {
+        border: none;
+        background: none;
+        cursor: pointer;
+        display: flex;
+        gap: .5rem;
+        margin-left: auto;
+        padding: .5rem;
+    }
+
+    li {
+        margin: 0 3%;
+        font-size: 1.5rem;
+        margin-top: 20px;
+        text-align: center;
+        padding: 0;
+    }
+    
+    .hamburguer {
+        border-top: 2px solid;
+        display: block;
+        width: 20px;
+    }
+    
+    .hamburguer::after, .hamburguer::before {
+        content: '';
+        display: block;
+        width: 20px;
+        height: 2px;
+        background: currentColor;
+        margin-top: 5px;
+        transition: .3s;
+        position: relative;
+    }
+    
+    .cabecalho__lista {
+        display: block;
+        list-style-type: none;
+        top: 35px;
+        right: 0px;
+        position: absolute;
+        width: 100%;
+        height: 0;
+        z-index: 1000;
+        transition: .6s;
+        visibility: hidden;
+        overflow-y: hidden;
+    }
+    
+    .cabecalho__nav.active .cabecalho__lista {
+        height: calc(100vh - 35px);
+        background-color: var(--corheader);
+        visibility: visible;
+        overflow-y: auto;
+    }
+    .contato__card {
+        margin-bottom: 2rem;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .cabecalho__button {
+        display: none;
+    }
+    .cabecalho__lista {
+        box-sizing: border-box;
+        display: flex;
+        list-style-type: none;
+        justify-content: space-evenly;
+        font-size: 0.87rem;
+    }
+    .home, .sobre, .habilidades, .contato__container {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .home {
+        margin-top: 2rem;
+    }
+
+    .section-title {
+        margin-top: 6rem;
+    }
+
+    .home__img {
+        width: 90%;
+    }
+
+    /*==================== SOBRE ====================*/
+    .sobre__text, .contato__text {
+        margin-left: auto;
+    }
+    .sobre__text{
+        width: 80%;
+    }
+
+    .sobre__img {
+        width: 40%;
+    }
+    /*==================== CARD ====================*/
+    .card-frontend, .card-backend {
+        width: 100%;
+    }
+    /*==================== QUALIFICACOES ====================*/
+    .qualificacao-trabalho {
+        margin-left: 5rem;
+    }
+    /*==================== CONTATE ME ====================*/
+    .contato {
+        padding-bottom: 3rem;
+    }
+    .contato__email {
+        width: 50%;
+        height: 50%;
+    }
+
+    .contato__text {
+        width: 50%;
+        margin-left: auto;
+    }
+
+    .contato__card {
+        padding: 0;
+        width: 60%;
+    }
+    /*==================== FOOTER ====================*/
+    .footer {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .footer-esquerdo {
+        margin: auto;
+    }
+
+    .footer-direito {
+        margin: auto 3%;
+    }
+}
+
+@media only screen and (min-width: 900px) {
+    .cabecalho__lista li {
+        font-size: 1.3rem;
+    }
+
+    .home {
+        display: grid;
+        grid-template-columns: 1fr 1fr; 
+    }
+
+    .home__text__button {
+        margin-left: auto;
+        margin-right: 3rem;
+    }
+    /*==================== SOBRE ====================*/
+    .sobre__text__detalhes{
+        width: 60%;
+    }
+    .sobre__text button {
+        margin-top: 1rem;
+    }
+    /*==================== HABILIDADES ====================*/
+    .habilidades {
+        margin: auto;
+        width: 70%;
+    }
+    .card-frontend, .card-backend {
+        margin: auto 5%;
+    }
+    /*==================== QUALIFICACOES ====================*/
+    .qualificacao-text {
+        margin-left: auto;
+        margin-right: 5%;
+    }
+    /*==================== CONTATO ====================*/
+    .contato__container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    .contato__text {
+        width: 60%;
+        margin-top: 1rem;
+        margin-right: auto;
+    }
+    .home__button__contateme {
+        margin-left: 8rem;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .home {
+        display: grid;
+        grid-template-columns: 1fr 1fr; 
+    }
+    .home__img, .sobre__text {
+       width: 50%;
+       justify-self: center; 
+    }
+    .home__text {
+        width: 70%;
+    }
+    .sobre__img {
+        margin-right: auto;
+        width: 25%;
+    }
+    .sobre__text {
+        width: 60%;
+    }
+    .contato__card {
+        padding: .5rem;
+    }
+}
